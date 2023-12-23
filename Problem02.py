@@ -5,6 +5,7 @@ def solution(score,k):
 #        if score[i] >= k:
 #            answer+=1
 
+# lecture answer
     for X in score:
         if X >= k:
             answer+=1
