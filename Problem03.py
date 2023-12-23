@@ -2,14 +2,22 @@ def solution(nums):
     answer=0
     temp=0
 
+#    for i in nums:
+#        if i == 1:
+#           temp+=1
+#           if temp >= answer:
+#               answer=temp
+#        else:
+#            temp=0
+
+
+# lecture answer
     for i in nums:
         if i == 1:
            temp+=1
-           if temp >= answer:
-               answer=temp
+           answer=max(temp,answer)
         else:
-            temp=0
-        
+            temp=0       
 
     return answer
 
