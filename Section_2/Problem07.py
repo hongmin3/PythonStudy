@@ -12,10 +12,8 @@ for i in range(BlockNum):
 print(Answer)
 n=Answer[0]
 for j in range(len(Answer)-1):
-        if Answer[j+1] > Answer[j]:
-                if  j>=1 and n >= Answer[j+1]:
-                    COUNT=COUNT-1
-                    n=Answer[j+1]
+        if Answer[j+1] > n:
+                n=Answer[j+1]
                 print(COUNT,Answer[j])
                 COUNT=COUNT+1
 
