@@ -1,6 +1,14 @@
+from collections import deque
 def solution(nums):
-    Answer= list(set(nums))
-    Answer.sort(reverse=True)
+#    Answer= list(set(nums))
+#    Answer.sort(reverse=True) 
+    Answer = deque()
+    Answer.appendleft(nums[0])
+    for i in range(1,len(nums)):
+        if nums[i] != Answer[0]:
+            Answer.appendleft(nums[i])
+
+        
     return Answer
 
 
