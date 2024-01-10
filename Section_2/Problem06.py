@@ -1,9 +1,10 @@
 def solution(nums,target):
+    Answer = [0] * 2
     for i in range(len(nums)-1):
         for j in range(i+1,len(nums)):
             if nums[i] + nums[j] == target:
                 Answer=[nums[i],nums[j]]
-                Answer.sort()
+               # Answer.sort()
                 return Answer
             else:
                 Answer=[0,0]

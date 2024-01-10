@@ -7,7 +7,6 @@ def solution(nums):
     for i in range(1,len(nums)):
         if nums[i] != Answer[0]:
             Answer.appendleft(nums[i])
-
         
     return Answer
 
