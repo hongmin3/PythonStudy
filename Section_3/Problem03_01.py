@@ -1,17 +1,12 @@
 def solution(nums):
-    answer=0
-    dic = dict()
-    for key in nums:
-        if key not in dic:
-            dic[key] = 1
-        else:
-            dic[key] += 1
+    answer=-1
+    cnt = [0] * 1001
+    for x in nums:
+        cnt[x] += 1
 
-    for key in nums:
-        if dic(key) =! 1:
-            del dic(key)
-
-    for key in 
+    for i in range(1,1001):
+        if cnt[i] == 1:
+            answer = max(answer, i)
 
    
     return answer
