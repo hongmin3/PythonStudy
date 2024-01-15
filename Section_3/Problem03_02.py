@@ -1,13 +1,14 @@
+from collections import defaultdict
+
 def solution(nums):
     answer=-1
-    dic = dict();
-    for key in nums:
-        if key not in dic:
-             dic[key] = 1
-        else:
-            dic[key] += 1
+    dic = defaultdict(int);     # int 를 붙히는건 디폴트밸류 타입을 선언 하는거임
 
-    for x in dic:
+    for key in nums:            # 중복된 수를 체크한다
+        if key not in dic:
+             dic[key] = 1         
+
+    for x in dic:               # 가장 큰 값을 찾는다.
         if dic[x] == 1 :
             answer=max(x, answer)
 
