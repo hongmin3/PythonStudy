@@ -5,7 +5,7 @@ def solution(nums):
     dic = defaultdict(int);     # int 를 붙히는건 디폴트밸류 타입을 선언 하는거임
 
     for key in nums:            # 중복된 수를 체크한다
-        if key not in dic:
+        if key in dic:
              dic[key] = 1         
 
     for x in dic:               # 가장 큰 값을 찾는다.
